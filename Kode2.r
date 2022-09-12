@@ -35,8 +35,8 @@ data<-ApiData("https://data.ssb.no/api/v0/en/table/12558/",
 
 #Gjør om til dataframe samt rydder litt opp.
 Tempdf <- as.data.frame(data)
-#Tempdf <- Tempdf %>% 
-  #clean_names()
+Tempdf <- Tempdf %>% 
+  clean_names()
 Tempdf <- Tempdf %>% 
   subset(select = -dataset_n_astatus)
 
